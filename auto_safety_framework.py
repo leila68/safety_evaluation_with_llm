@@ -4,7 +4,6 @@ from gpt4all_model import generate_warning_message
 from llm_module import *
 
 
-
 import sys
 
 video_file_path = sys.argv[1]
