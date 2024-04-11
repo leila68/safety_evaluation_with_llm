@@ -1,4 +1,3 @@
-
 from gpt4all import GPT4All
 def process_prompt(prompt_array):
     semantic_array = []
@@ -9,9 +8,6 @@ def process_prompt(prompt_array):
     return semantic_array
 
 
-def safety_checker(semantics):
-    warnings = True
-    for s in semantics:
-        pass
 
-    return warnings
+
+

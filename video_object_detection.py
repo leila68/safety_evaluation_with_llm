@@ -2,7 +2,6 @@ from imageai.Detection import VideoObjectDetection
 import os
 import cv2
 
-
 def process_video(video_file_path):
     execution_path = os.getcwd()
     detector = VideoObjectDetection()
@@ -13,7 +12,7 @@ def process_video(video_file_path):
     # customize the type of object(s) you want to be detected in the video
     # custom_objects = detector.CustomObjects(person=True, bicycle=True, motorcycle=True)
 
-    video_path = detector.detectObjectsFromVideo(input_file_path=os.path.join(execution_path, "traffic-mini.mp4"),
+    video_path = detector.detectObjectsFromVideo(input_file_path=os.path.join(execution_path, video_file_path),
                                                  output_file_path=os.path.join(execution_path, "traffic_detected"),
                                                  frames_per_second=20, log_progress=True)
     print(video_path)
@@ -33,7 +32,7 @@ def process_video(video_file_path):
 
     # Call the function
     video_detector.detectObjectsFromVideo(
-        input_file_path=os.path.join(execution_path, "traffic-mini.mp4"),
+        input_file_path=os.path.join(execution_path, video_file_path),
         output_file_path=os.path.join(execution_path, "traffic_detected"),
         frames_per_second=10,
         per_second_function=for_seconds,
@@ -42,5 +41,10 @@ def process_video(video_file_path):
 
     # Return the object list per timestamp
     return object_list_per_ts
+
+
+
+
+
 
 
